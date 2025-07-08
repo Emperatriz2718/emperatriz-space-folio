@@ -5,6 +5,7 @@ import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
+import ChatBot from '@/components/ChatBot';
 
 const Index = () => {
   return (
@@ -15,6 +16,9 @@ const Index = () => {
       <Projects />
       <Skills />
       <Contact />
+      
+      {/* ChatBot flotante */}
+      <ChatBot />
       
       {/* Footer */}
       <footer className="py-8 px-4 bg-space-cosmic border-t border-space-stellar">
