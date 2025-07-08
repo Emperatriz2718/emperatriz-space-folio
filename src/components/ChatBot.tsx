@@ -1,22 +1,14 @@
 
 import React, { useState } from 'react';
-import { MessageCircle, X, Send } from 'lucide-react';
+import { MessageCircle, X } from 'lucide-react';
+
+const CHATBOT_URL = "https://copilotstudio.microsoft.com/environments/Default-6ca34ae1-466f-44bc-a7aa-0ac5a78c61b1/bots/cr3a3_undefinedNameOfAgentsFunctionality/webchat?__version__=2";
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState('');
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (message.trim()) {
-      // Aquí se integraría con el chatbot de Microsoft
-      console.log('Mensaje enviado:', message);
-      setMessage('');
-    }
   };
 
   return (
@@ -43,42 +35,14 @@ const ChatBot = () => {
             </button>
           </div>
 
-          {/* Chat Content */}
-          <div className="flex flex-col h-full">
-            {/* Messages Area */}
-            <div className="flex-1 p-4 overflow-y-auto bg-space-deep/50">
-              <div className="space-y-3">
-                <div className="flex items-start space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-br from-space-aurora to-space-stellar rounded-full flex items-center justify-center">
-                    <MessageCircle size={16} className="text-white" />
-                  </div>
-                  <div className="bg-card border border-space-stellar rounded-lg p-3 max-w-xs">
-                    <p className="text-foreground text-sm">
-                      ¡Hola! Soy el asistente de Emperatriz Morales. ¿En qué puedo ayudarte con información sobre exploración espacial, derecho internacional o sus proyectos?
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Input Area */}
-            <div className="p-4 border-t border-space-stellar bg-card/80">
-              <form onSubmit={handleSendMessage} className="flex space-x-2">
-                <input
-                  type="text"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Escribe tu mensaje..."
-                  className="flex-1 bg-space-deep/50 border border-space-stellar rounded-lg px-3 py-2 text-foreground placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-space-aurora text-sm"
-                />
-                <button
-                  type="submit"
-                  className="bg-gradient-to-r from-space-aurora to-space-stellar hover:from-space-stellar hover:to-space-aurora text-white p-2 rounded-lg transition-all duration-200 stellar-glow"
-                >
-                  <Send size={16} />
-                </button>
-              </form>
-            </div>
+          {/* Chat Content - Microsoft Copilot Studio iframe */}
+          <div className="h-full rounded-b-2xl overflow-hidden">
+            <iframe 
+              src={CHATBOT_URL}
+              className="w-full h-full border-0 rounded-b-2xl"
+              title="Asistente Espacial de Emperatriz Morales"
+              allow="microphone"
+            />
           </div>
         </div>
       )}
