@@ -113,7 +113,7 @@ const Contact = () => {
                     <Instagram className="w-6 h-6 text-white" />
                   </a>
                   <a 
-                    href="https://facebook.com/emperatrizmorales" 
+                    href="https://www.facebook.com/share/1FduaencXx/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="p-3 bg-space-deep rounded-full hover:bg-space-stellar transition-colors stellar-glow"
