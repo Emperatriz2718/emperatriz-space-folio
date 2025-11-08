@@ -17,7 +17,7 @@ const ChatBot = () => {
       {isOpen && (
         <div className="mb-4 w-80 h-96 bg-card border border-space-stellar rounded-2xl shadow-2xl stellar-glow animate-scale-in">
           {/* Header */}
-          <div className="flex items-center justify-between p-3 bg-gradient-to-r from-space-cosmic to-space-nebula rounded-t-2xl relative z-10">
+          <div className="flex items-center justify-between p-4 bg-gradient-to-r from-space-cosmic to-space-nebula rounded-t-2xl">
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-space-gold rounded-full animate-pulse"></div>
               <div>
@@ -29,15 +29,14 @@ const ChatBot = () => {
             </div>
             <button
               onClick={toggleChat}
-              className="text-white hover:text-space-gold transition-colors duration-200 p-1 hover:bg-white/10 rounded-full flex-shrink-0"
-              aria-label="Cerrar chat"
+              className="text-white hover:text-space-gold transition-colors duration-200"
             >
-              <X size={18} />
+              <X size={20} />
             </button>
           </div>
 
           {/* Chat Content - Microsoft Copilot Studio iframe */}
-          <div className="h-[calc(100%-60px)] rounded-b-2xl overflow-hidden">
+          <div className="h-full rounded-b-2xl overflow-hidden">
             <iframe 
               src={CHATBOT_URL}
               className="w-full h-full border-0 rounded-b-2xl"

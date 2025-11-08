@@ -1,3 +1,4 @@
+
 import { Mail, MapPin, Phone, Instagram, Facebook, Twitter, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -35,31 +36,11 @@ const Contact = () => {
   ];
 
   const hobbies = [
-    {
-      name: "Lectura",
-      description: "Investigaciones aeroespaciales (NASA, agencias espaciales)",
-      image: "/images/hobbies/lectura.png"
-    },
-    {
-      name: "Música",
-      description: "Jazz, clásica y ambiental",
-      image: "/images/hobbies/musica.png"
-    },
-    {
-      name: "Deporte y bienestar",
-      description: "Yoga, meditación, caminatas",
-      image: "/images/hobbies/deporteybienestar.png"
-    },
-    {
-      name: "Viajes",
-      description: "Culturas diversas y geografía planetaria",
-      image: "/images/hobbies/viajes.png"
-    },
-    {
-      name: "Estudios alternativos",
-      description: "Visión remota, percepción extrasensorial y exopolítica",
-      image: "/images/hobbies/estudiosalternativos.png"
-    }
+    "Lectura: Investigaciones aeroespaciales (NASA, agencias espaciales)",
+    "Música: Jazz, clásica y ambiental",
+    "Deporte y bienestar: Yoga, meditación, caminatas",
+    "Viajes: Culturas diversas y geografía planetaria",
+    "Estudios alternativos: Visión remota, percepción extrasensorial y exopolítica"
   ];
 
   return (
@@ -113,7 +94,7 @@ const Contact = () => {
                     <Instagram className="w-6 h-6 text-white" />
                   </a>
                   <a 
-                    href="https://www.facebook.com/share/1FduaencXx/" 
+                    href="https://facebook.com/emperatrizmorales" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="p-3 bg-space-deep rounded-full hover:bg-space-stellar transition-colors stellar-glow"
@@ -176,12 +157,10 @@ const Contact = () => {
             Hobbies e Intereses
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {hobbies.map((hobby) => (
-              <Card key={hobby.name} className="bg-space-cosmic/50 border-space-stellar hover:border-space-aurora transition-all duration-300 stellar-glow">
-                <CardContent className="p-6 flex flex-col items-center">
-                  <img src={hobby.image} alt={hobby.name} className="w-24 h-24 object-cover rounded-full mb-4 border-4 border-space-aurora" />
-                  <p className="text-space-aurora font-semibold mb-1">{hobby.name}</p>
-                  <p className="text-gray-300 leading-relaxed text-center">{hobby.description}</p>
+            {hobbies.map((hobby, index) => (
+              <Card key={index} className="bg-space-cosmic/50 border-space-stellar hover:border-space-aurora transition-all duration-300 stellar-glow">
+                <CardContent className="p-6">
+                  <p className="text-gray-300 leading-relaxed">{hobby}</p>
                 </CardContent>
               </Card>
             ))}
