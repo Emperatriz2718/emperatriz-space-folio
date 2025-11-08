@@ -65,7 +65,7 @@ const Header = () => {
               <a href="https://instagram.com/emperatriz1827" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-6 h-6 text-space-aurora hover:text-space-gold transition-colors" />
               </a>
-              <a href="https://facebook.com/emperatrizmorales" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/share/1FduaencXx/" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-6 h-6 text-space-stellar hover:text-space-gold transition-colors" />
               </a>
               <a href="https://twitter.com/Emperatriz1827" target="_blank" rel="noopener noreferrer">
