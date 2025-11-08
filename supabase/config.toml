@@ -1,4 +1,0 @@
-project_id = "ulprdshkiqcndgqxmskw"
-
-[functions.chat-emperatriz]
-verify_jwt = false
