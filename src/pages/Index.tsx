@@ -1,5 +1,6 @@
 
 import Header from '@/components/Header';
+import StudiesExpertise from '@/components/StudiesExpertise';
 import Education from '@/components/Education';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
