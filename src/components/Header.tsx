@@ -1,6 +1,4 @@
-
 import { Mail, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 const Header = () => {
   return (
@@ -31,33 +29,55 @@ const Header = () => {
           </div>
 
           {/* Name and Title */}
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-orbitron font-black text-gradient animate-float">
+          <div className="space-y-3">
+            <h1 className="text-5xl md:text-7xl font-orbitron font-black text-white animate-float tracking-wide">
               EMPERATRIZ MORALES
             </h1>
-            <p className="text-xl md:text-2xl text-space-gold font-medium">
-              Exploración Espacial • Derecho Internacional • Tecnología Futurista
+            <p className="text-xl md:text-2xl text-white font-medium">
+              Global Private Company
+            </p>
+            <p className="text-lg md:text-xl text-space-gold font-medium">
+              Futuristic Technologies • Aerospace / Renewable Energies
             </p>
           </div>
 
-          {/* Professional Summary */}
+          {/* Role */}
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Profesional con sólida formación en <span className="text-space-aurora">Derecho</span>, 
-              <span className="text-space-stellar"> Geopolítica</span> y 
-              <span className="text-space-gold"> Tecnología</span>, con enfoque en la exploración espacial 
-              y la cooperación interplanetaria. Comprometida con el desarrollo de soluciones innovadoras 
-              que impulsen a la humanidad hacia el futuro espacial.
+            <p className="inline-block text-lg md:text-xl text-white font-orbitron border border-space-stellar rounded-full px-6 py-2 bg-space-cosmic/50 stellar-glow">
+              Founder &amp; Legal Representative
+            </p>
+          </div>
+
+          {/* Official Bio */}
+          <div className="max-w-4xl mx-auto space-y-5">
+            <p className="text-lg md:text-xl text-white leading-relaxed">
+              Complete studies in <span className="text-space-aurora font-medium">Artificial Intelligence</span>,{' '}
+              <span className="text-space-stellar font-medium">Data Analysis</span>,{' '}
+              <span className="text-space-gold font-medium">Cybersecurity</span> and{' '}
+              <span className="text-space-aurora font-medium">Future Neutrino Communication</span>.
+            </p>
+            <p className="text-lg md:text-xl text-white leading-relaxed">
+              Specialized in <span className="text-space-gold">Neutrino Communication of the Future</span>,{' '}
+              <span className="text-space-stellar">Futuristic Renewable Energies</span> and{' '}
+              <span className="text-space-aurora">Aerospace</span>.
+            </p>
+            <p className="text-lg md:text-xl text-white leading-relaxed">
+              Our vision: <span className="text-space-gold font-medium">The Universe belongs to everyone</span>. Our base is the Lunar Base and Mars Colonization.
+            </p>
+            <p className="text-lg md:text-xl text-white leading-relaxed">
+              Our exclusive focus is <span className="text-space-aurora">Exopolitics</span>,{' '}
+              <span className="text-space-stellar">International Space Law</span> and{' '}
+              <span className="text-space-gold">Asteroid Mining Laws</span> — a new reality powered by Neutrino AI and Nanotechnology.
             </p>
           </div>
 
           {/* Contact Info */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center space-x-2 text-gray-300">
+            <div className="flex items-center justify-center space-x-2 text-white">
               <MapPin className="w-5 h-5 text-space-gold" />
               <span>Colombia</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-gray-300">
+            <div className="flex items-center justify-center space-x-2 text-white">
               <Mail className="w-5 h-5 text-space-gold" />
               <span className="text-sm">emperatrizmorales2718@gmail.com</span>
             </div>
@@ -65,7 +85,7 @@ const Header = () => {
               <a href="https://instagram.com/emperatriz1827" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-6 h-6 text-space-aurora hover:text-space-gold transition-colors" />
               </a>
-              <a href="https://facebook.com/emperatrizmorales" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/share/1FduaencXx/" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-6 h-6 text-space-stellar hover:text-space-gold transition-colors" />
               </a>
               <a href="https://twitter.com/Emperatriz1827" target="_blank" rel="noopener noreferrer">
@@ -77,7 +97,7 @@ const Header = () => {
           {/* Personal Slogan */}
           <div className="max-w-3xl mx-auto pt-8">
             <blockquote className="text-xl md:text-2xl font-orbitron italic text-space-gold border-l-4 border-space-aurora pl-6">
-              "Soy una mujer reservada y digna en mis acciones, diplomática y leal. 
+              "Soy una mujer reservada y digna en mis acciones, diplomática y leal.
               Mujer de vanguardia futurista, enfocada en la exploración interplanetaria."
             </blockquote>
           </div>
