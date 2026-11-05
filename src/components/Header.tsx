@@ -85,8 +85,11 @@ const Header = () => {
               <a href="https://instagram.com/emperatriz1827" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-6 h-6 text-space-aurora hover:text-space-gold transition-colors" />
               </a>
-              <a href="https://www.facebook.com/share/1FduaencXx/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/share/19ckpqLRcz/" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center" aria-label="Facebook Cuenta Oficial Verificada - Emperatriz Morales">
                 <Facebook className="w-6 h-6 text-space-stellar hover:text-space-gold transition-colors" />
+                <span className="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-[#1877F2] flex items-center justify-center" title="Cuenta Oficial Verificada">
+                  <svg viewBox="0 0 24 24" className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                </span>
               </a>
               <a href="https://twitter.com/Emperatriz1827" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-6 h-6 text-space-aurora hover:text-space-gold transition-colors" />
