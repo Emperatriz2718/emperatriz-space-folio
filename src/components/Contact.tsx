@@ -86,8 +86,8 @@ const Contact = () => {
                 <p className="text-white font-semibold mb-4">Redes Sociales</p>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://instagram.com/emperatriz1827" 
-                    target="_blank" 
+                    href="https://www.instagram.com/emperatriz_1827/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-space-deep rounded-full hover:bg-space-aurora transition-colors stellar-glow"
                   >

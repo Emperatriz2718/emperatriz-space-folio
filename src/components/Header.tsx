@@ -82,7 +82,7 @@ const Header = () => {
               <span className="text-sm">emperatrizmorales2718@gmail.com</span>
             </div>
             <div className="flex items-center justify-center space-x-4">
-              <a href="https://instagram.com/emperatriz1827" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/emperatriz_1827/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @emperatriz_1827">
                 <Instagram className="w-6 h-6 text-space-aurora hover:text-space-gold transition-colors" />
               </a>
               <a href="https://www.facebook.com/share/19ckpqLRcz/" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center" aria-label="Facebook Cuenta Oficial Verificada - Emperatriz Morales">
