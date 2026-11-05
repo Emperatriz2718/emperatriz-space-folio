@@ -35,7 +35,7 @@ EDUCACIÓN ACADÉMICA:
 4. Derecho Penal Internacional: Conflicto Armado — Universidad de Leiden.
 
 FORMACIÓN ADICIONAL:
-- Diplomado en Inteligencia Artificial — Talento Tech Caribe (convenio Universidad Libre de Barranquilla). Módulos Explorador, Integrador e Innovador (en curso).
+- Diplomado en Inteligencia Artificial — Talento Tech Caribe (convenio Universidad Libre de Barranquilla). Módulos Explorador, Integrador e Innovador (completados).
 
 DATOS DE UNIVERSIDADES:
 - Universidad de Kuwait: P.O. Box 5969, Safat 13060 · +965 2498 5555 · info@ku.edu.kw

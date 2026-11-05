@@ -35,7 +35,7 @@ const Education = () => {
     {
       program: "Diplomado en Inteligencia Artificial",
       institution: "Talento Tech Caribe (convenio Universidad Libre de Barranquilla)",
-      modules: ["Módulo Explorador (En curso)", "Módulo Integrador (En curso)", "Módulo Innovador (En curso)"]
+      modules: ["Módulo Explorador (Completado)", "Módulo Integrador (Completado)", "Módulo Innovador (Completado)"]
     }
   ];
 
@@ -79,6 +79,10 @@ const Education = () => {
           </h3>
           <Card className="bg-gradient-to-br from-space-cosmic to-space-nebula border-space-aurora stellar-glow">
             <CardHeader>
+              <div className="inline-flex self-end items-center gap-2 bg-green-500/15 border border-green-500/60 text-green-400 font-orbitron text-xs font-bold tracking-wide rounded-full px-4 py-1.5 mb-3">
+                <span className="w-2 h-2 bg-green-400 rounded-full" />
+                DIPLOMADO COMPLETADO ✅
+              </div>
               <div className="flex items-center space-x-4">
                 <Brain className="w-10 h-10 text-space-gold" />
                 <div>
