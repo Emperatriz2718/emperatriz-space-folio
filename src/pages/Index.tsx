@@ -1,4 +1,5 @@
 
+import { Instagram, Facebook } from 'lucide-react';
 import Header from '@/components/Header';
 import StudiesExpertise from '@/components/StudiesExpertise';
 import Education from '@/components/Education';
