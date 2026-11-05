@@ -4,6 +4,7 @@ import StudiesExpertise from '@/components/StudiesExpertise';
 import Education from '@/components/Education';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
+import NeutrinoCommunication from '@/components/NeutrinoCommunication';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import ChatBot from '@/components/ChatBot';
@@ -16,6 +17,7 @@ const Index = () => {
       <Education />
       <Experience />
       <Projects />
+      <NeutrinoCommunication />
       <Skills />
       <Contact />
       
