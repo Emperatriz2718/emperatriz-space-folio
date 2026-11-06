@@ -2,6 +2,7 @@
 import { Mail, MapPin, Phone, Instagram, Facebook, Twitter, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import PersonalProfile from '@/components/PersonalProfile';
 
 const Contact = () => {
   const universities = [
@@ -56,7 +57,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           {/* Contact Information */}
           <Card className="bg-space-cosmic/70 border-space-stellar stellar-glow">
             <CardHeader>
@@ -119,42 +120,9 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Personal Profile */}
-          <Card className="bg-space-cosmic/70 border-space-stellar stellar-glow">
-            <CardHeader>
-              <CardTitle className="text-2xl font-orbitron text-space-gold">
-                Perfil Personal
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <p className="text-space-aurora font-semibold">Nombre completo:</p>
-                  <p className="text-gray-300">Emperatriz Morales</p>
-                </div>
-                <div>
-                  <p className="text-space-aurora font-semibold">Fecha de nacimiento:</p>
-                  <p className="text-gray-300">18 de noviembre de 1999</p>
-                </div>
-                <div>
-                  <p className="text-space-aurora font-semibold">Lugar de nacimiento:</p>
-                  <p className="text-gray-300">Emiratos Árabes Unidos</p>
-                </div>
-                <div>
-                  <p className="text-space-aurora font-semibold">Estado civil:</p>
-                  <p className="text-gray-300">Soltera</p>
-                </div>
-              </div>
-              <div className="pt-4">
-                <p className="text-white font-semibold mb-2">Características</p>
-                <p className="text-gray-300 leading-relaxed">
-                  Mujer reservada, diplomática, leal y futurista. 
-                  Líder comprometida con la evolución planetaria e interplanetaria.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
         </div>
+
+        <PersonalProfile />
 
         {/* Hobbies */}
         <div className="mb-20">

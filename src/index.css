@@ -38,6 +38,16 @@ All colors MUST be HSL.
     --ring: 258 90% 66%;
 
     --radius: 0.5rem;
+    --profile-start: 274 87% 21%;
+    --profile-middle: 263 69% 30%;
+    --profile-end: 297 64% 28%;
+    --profile-label: 269 97% 85%;
+    --profile-glow: 271 91% 65%;
+    --social-facebook: 221 83% 53%;
+    --social-facebook-hover: 217 91% 60%;
+    --social-instagram-start: 330 81% 60%;
+    --social-instagram-middle: 271 91% 65%;
+    --social-instagram-end: 27 96% 61%;
 
     --sidebar-background: 11 33% 7%;
     --sidebar-foreground: 210 40% 98%;
@@ -47,6 +57,24 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
     --sidebar-ring: 258 90% 66%;
+  }
+}
+
+@layer components {
+  .personal-profile {
+    background: linear-gradient(135deg, hsl(var(--profile-start)), hsl(var(--profile-middle)), hsl(var(--profile-end)));
+    border-color: hsl(var(--profile-glow) / 0.3);
+    box-shadow: 0 0 40px hsl(var(--profile-glow) / 0.4);
+  }
+  .profile-label { color: hsl(var(--profile-label)); }
+  .profile-panel {
+    background: hsl(var(--foreground) / 0.05);
+    border-color: hsl(var(--foreground) / 0.1);
+  }
+  .personal-profile .profile-facebook { background: hsl(var(--social-facebook)); }
+  .personal-profile .profile-facebook:hover { background: hsl(var(--social-facebook-hover)); }
+  .profile-instagram {
+    background: linear-gradient(90deg, hsl(var(--social-instagram-start)), hsl(var(--social-instagram-middle)), hsl(var(--social-instagram-end)));
   }
 }
 
