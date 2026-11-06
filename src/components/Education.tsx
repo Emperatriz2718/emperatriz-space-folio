@@ -5,27 +5,27 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const Education = () => {
   const education = [
     {
-      degree: "Derecho",
-      institution: "Universidad de Kuwait",
-      note: "Homologado en Colombia por Universidad Jorge Tadeo Lozano",
+      degree: "Law",
+      institution: "Kuwait University",
+      note: "Homologated in Colombia by Universidad Jorge Tadeo Lozano",
       icon: Shield,
       color: "text-space-aurora"
     },
     {
-      degree: "Especialización en Geopolítica Internacional",
-      institution: "Universidad de Dubái",
+      degree: "Specialization in International Geopolitics",
+      institution: "University of Dubai",
       icon: Globe,
       color: "text-space-stellar"
     },
     {
-      degree: "Informática Penal",
-      institution: "Universidad de Leiden (convenio con Universidad de Kuwait)",
+      degree: "Cyber Criminal Law",
+      institution: "Leiden University (agreement with Kuwait University)",
       icon: Brain,
       color: "text-space-gold"
     },
     {
-      degree: "Derecho Penal Internacional: Conflicto Armado",
-      institution: "Universidad de Leiden",
+      degree: "International Criminal Law: Armed Conflict",
+      institution: "Leiden University",
       icon: Shield,
       color: "text-space-aurora"
     }
@@ -33,9 +33,9 @@ const Education = () => {
 
   const additionalTraining = [
     {
-      program: "Diplomado en Inteligencia Artificial",
-      institution: "Talento Tech Caribe (convenio Universidad Libre de Barranquilla)",
-      modules: ["Módulo Explorador (Completado)", "Módulo Integrador (Completado)", "Módulo Innovador (Completado)"]
+      program: "Diploma in Artificial Intelligence",
+      institution: "Talento Tech Caribe / Universidad Libre de Barranquilla",
+      modules: ["Explorer Module Completed", "Integrator Module Completed", "Innovator Module Completed"]
     }
   ];
 
@@ -44,10 +44,10 @@ const Education = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-gradient mb-6">
-            Educación Académica
+            Academic Education
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Formación especializada en las principales universidades internacionales
+            Specialized training at leading international universities
           </p>
         </div>
 
@@ -75,13 +75,13 @@ const Education = () => {
         {/* Additional Training */}
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-orbitron font-bold text-space-aurora mb-8 text-center">
-            Formación Adicional
+            Additional Training
           </h3>
           <Card className="bg-gradient-to-br from-space-cosmic to-space-nebula border-space-aurora stellar-glow">
             <CardHeader>
               <div className="inline-flex self-end items-center gap-2 bg-green-500/15 border border-green-500/60 text-green-400 font-orbitron text-xs font-bold tracking-wide rounded-full px-4 py-1.5 mb-3">
                 <span className="w-2 h-2 bg-green-400 rounded-full" />
-                DIPLOMADO COMPLETADO ✅
+                DIPLOMA COMPLETED
               </div>
               <div className="flex items-center space-x-4">
                 <Brain className="w-10 h-10 text-space-gold" />

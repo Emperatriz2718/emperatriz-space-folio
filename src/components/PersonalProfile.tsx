@@ -12,7 +12,7 @@ export default function PersonalProfile() {
           <p><span className="profile-label font-semibold">Full Name:</span><br />Emperatriz Morales</p>
           <p><span className="profile-label font-semibold">Date of Birth:</span><br />November 18, 1999</p>
           <p><span className="profile-label font-semibold">Place of Birth:</span><br />United Arab Emirates</p>
-          <p><span className="profile-label font-semibold">Marital Status:</span><br />Single / Soltera</p>
+          <p><span className="profile-label font-semibold">Marital Status:</span><br />Single</p>
         </div>
         <div className="profile-panel space-y-4 p-6 rounded-2xl border">
           <p className="profile-label font-semibold">Languages</p>
@@ -21,9 +21,17 @@ export default function PersonalProfile() {
         </div>
       </div>
 
+      <div className="mt-8 space-y-6">
+        <p><span className="profile-label font-semibold">Characteristics:</span><br />Reserved, diplomatic, loyal and futuristic woman. Leader committed to planetary and interplanetary evolution.</p>
+        <div>
+          <h3 className="profile-label font-semibold mb-2">About</h3>
+          <p className="leading-relaxed">I am a reserved and dignified woman in my actions, diplomatic and loyal. A futuristic vanguard woman focused on interplanetary exploration. Founder &amp; Legal Representative. Specialized in International Criminal Law: Armed Conflict, Exopolitics, International Space Law, Asteroid Mining Laws, Neutrino Communication, Artificial Intelligence, Data Analysis, Cybersecurity, Futuristic Renewable Energies and Aerospace.</p>
+        </div>
+      </div>
+
       <div className="flex flex-wrap justify-center gap-4 mt-8">
         <Button asChild size="lg" className="profile-facebook rounded-full px-6 font-semibold text-primary-foreground">
-          <a href="https://www.facebook.com/share/19ckpqLRcz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Cuenta Oficial Verificada - Emperatriz Morales ✅">
+          <a href="https://www.facebook.com/share/19ckpqLRcz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Official Verified Account - Emperatriz Morales ✅">
             <BadgeCheck size={20} /> Facebook Verified
           </a>
         </Button>

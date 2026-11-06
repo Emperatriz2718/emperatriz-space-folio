@@ -75,7 +75,7 @@ const Header = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-2 text-white">
               <MapPin className="w-5 h-5 text-space-gold" />
-              <span>Colombia</span>
+              <span>Location: Colombia</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-white">
               <Mail className="w-5 h-5 text-space-gold" />
@@ -85,9 +85,9 @@ const Header = () => {
               <a href="https://www.instagram.com/emperatriz_1827/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @emperatriz_1827">
                 <Instagram className="w-6 h-6 text-space-aurora hover:text-space-gold transition-colors" />
               </a>
-              <a href="https://www.facebook.com/share/19ckpqLRcz/" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center" aria-label="Facebook Cuenta Oficial Verificada - Emperatriz Morales">
+              <a href="https://www.facebook.com/share/19ckpqLRcz/" target="_blank" rel="noopener noreferrer" className="relative inline-flex items-center" aria-label="Facebook Official Verified Account - Emperatriz Morales">
                 <Facebook className="w-6 h-6 text-space-stellar hover:text-space-gold transition-colors" />
-                <span className="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-[#1877F2] flex items-center justify-center" title="Cuenta Oficial Verificada">
+                <span className="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-[#1877F2] flex items-center justify-center" title="Official Verified Account">
                   <svg viewBox="0 0 24 24" className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                 </span>
               </a>
@@ -100,8 +100,7 @@ const Header = () => {
           {/* Personal Slogan */}
           <div className="max-w-3xl mx-auto pt-8">
             <blockquote className="text-xl md:text-2xl font-orbitron italic text-space-gold border-l-4 border-space-aurora pl-6">
-              "Soy una mujer reservada y digna en mis acciones, diplomática y leal.
-              Mujer de vanguardia futurista, enfocada en la exploración interplanetaria."
+              "I am a reserved and dignified woman in my actions, diplomatic and loyal. Futuristic vanguard woman focused on interplanetary exploration."
             </blockquote>
           </div>
         </div>

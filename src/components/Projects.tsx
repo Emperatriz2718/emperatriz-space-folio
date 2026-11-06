@@ -5,25 +5,32 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const Projects = () => {
   const projects = [
     {
-      title: "AIGLE-HAWK Alliance Global Interplanetaria",
-      description: "Exploración interplanetaria y cooperación global",
+      title: "AIGLE-HAWK Alliance Global Interplanetary",
+      description: "Interplanetary exploration and global cooperation",
       icon: Rocket,
       color: "from-space-aurora to-space-stellar",
-      details: "Proyecto integral de exploración espacial que busca establecer cooperación internacional para misiones interplanetarias futuras."
+      details: "Interplanetary exploration and global cooperation"
     },
     {
-      title: "Base Lunar Cráter Shackleton",
-      description: "Instalación autosostenible en el polo sur lunar",
+      title: "Shackleton Lunar Base Crater",
+      description: "Self-sustainable facility at the lunar south pole",
       icon: Moon,
       color: "from-space-stellar to-space-nebula",
-      details: "Diseño y planificación de una base lunar permanente en el cráter Shackleton, aprovechando los recursos de hielo de agua."
+      details: "Permanent lunar base design in Shackleton Crater, using water ice resources, self-sustainable facility at the lunar south pole"
     },
     {
-      title: "Colonización de Marte",
-      description: "Planificación jurídica y tecnológica para asentamientos humanos",
+      title: "Mars Colonization",
+      description: "Legal and technological planning for human settlements",
       icon: Globe,
       color: "from-space-nebula to-space-gold",
-      details: "Marco legal y tecnológico integral para establecer los primeros asentamientos humanos permanentes en Marte."
+      details: "Integral legal and technological framework to establish the first permanent human settlements on Mars"
+    },
+    {
+      title: "Neutrino Communication System Earth ⇌ Moon ⇌ Mars Link",
+      description: "The next generation of interplanetary links",
+      icon: Zap,
+      color: "from-space-aurora to-space-gold",
+      details: "The Neutrino Communication System represents the next generation of interplanetary links. Unlike radio waves, neutrinos traverse planetary matter without attenuation, enabling direct, line-of-sight independent communication, resistant to space weather, dust, and eclipses."
     }
   ];
 
@@ -32,10 +39,10 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-gradient mb-6">
-            Proyectos Destacados
+            Featured Projects
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Iniciativas visionarias que definen el futuro espacial de la humanidad
+            Visionary initiatives that define the spatial future of humanity
           </p>
         </div>
 
@@ -71,29 +78,29 @@ const Projects = () => {
         {/* Objectives Section */}
         <div className="mt-20">
           <h3 className="text-3xl font-orbitron font-bold text-space-aurora mb-12 text-center">
-            Objetivos Profesionales
+            Professional Objectives
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-gradient-to-br from-space-aurora to-space-stellar rounded-full flex items-center justify-center mx-auto stellar-glow">
                 <Zap className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-orbitron text-space-gold">Innovación</h4>
-              <p className="text-gray-300">Crear soluciones innovadoras en escenarios complejos</p>
+              <h4 className="text-xl font-orbitron text-space-gold">Innovation</h4>
+              <p className="text-gray-300">Create innovative solutions in complex scenarios</p>
             </div>
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-gradient-to-br from-space-stellar to-space-nebula rounded-full flex items-center justify-center mx-auto stellar-glow">
                 <Rocket className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-orbitron text-space-gold">Exploración</h4>
-              <p className="text-gray-300">Contribuir activamente a la colonización y exploración del espacio</p>
+              <h4 className="text-xl font-orbitron text-space-gold">Exploration</h4>
+              <p className="text-gray-300">Actively contribute to space colonization and exploration</p>
             </div>
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-gradient-to-br from-space-nebula to-space-gold rounded-full flex items-center justify-center mx-auto stellar-glow">
                 <Globe className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-orbitron text-space-gold">Cooperación</h4>
-              <p className="text-gray-300">Fomentar la cooperación internacional frente a desafíos planetarios</p>
+              <h4 className="text-xl font-orbitron text-space-gold">Cooperation</h4>
+              <p className="text-gray-300">Foster international cooperation in addressing planetary challenges</p>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const NODES = [
   {
-    node: 'NODE 1: EARTH / TIERRA',
+    node: 'NODE 1: EARTH',
     subtitle: 'Home Planet | Ground Station',
     icon: Globe,
     color: 'from-space-aurora to-space-stellar',
@@ -15,7 +15,7 @@ const NODES = [
     ],
   },
   {
-    node: 'NODE 2: MOON / LUNA',
+    node: 'NODE 2: MOON',
     subtitle: 'Lunar South Pole | Shackleton Outpost',
     icon: Moon,
     color: 'from-space-stellar to-space-nebula',
@@ -28,7 +28,7 @@ const NODES = [
     ],
   },
   {
-    node: 'NODE 3: MARS / MARTE',
+    node: 'NODE 3: MARS',
     subtitle: 'Mars Colony | Valles Marineris Colony',
     icon: Rocket,
     color: 'from-space-nebula to-space-gold',
@@ -70,7 +70,7 @@ const NeutrinoCommunication = () => {
             Earth <span className="text-space-gold">⇌</span> Moon <span className="text-space-gold">⇌</span> Mars Link
           </p>
           <p className="text-base md:text-lg text-gray-300 max-w-4xl mx-auto">
-            NEUTRINO COMMUNICATION SYSTEM — Earth ⇌ Moon ⇌ Mars | Earth–Luna–Tierra–Marte Link | Subsurface Neutrino Communications for Deep Space Networks
+            NEUTRINO COMMUNICATION SYSTEM — Earth ⇌ Moon ⇌ Mars | Earth-Moon-Mars Link | Subsurface Neutrino Communications for Deep Space Networks
           </p>
         </div>
 

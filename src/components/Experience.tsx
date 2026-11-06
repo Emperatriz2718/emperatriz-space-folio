@@ -5,32 +5,32 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const Experience = () => {
   const experiences = [
     {
-      title: "Investigadora y gestora",
-      organization: "Proyecto AIGLE-HAWK Alliance Global Interplanetaria",
+      title: "Researcher and Manager",
+      organization: "AIGLE-HAWK Alliance Global Interplanetary Project",
       icon: Rocket,
       color: "text-space-aurora",
-      description: "Liderazgo en proyectos de exploración interplanetaria y cooperación global"
+      description: "Leadership in interplanetary exploration projects and global cooperation."
     },
     {
-      title: "Coordinadora de proyectos espaciales",
-      organization: "Base Lunar Cráter Shackleton y Colonización de Marte",
+      title: "Space Projects Coordinator",
+      organization: "Shackleton Lunar Base Crater and Mars Colonization",
       icon: Globe2,
       color: "text-space-stellar",
-      description: "Planificación y coordinación de instalaciones espaciales autosostenibles"
+      description: "Planning and coordination of self-sustainable space facilities."
     },
     {
-      title: "Apoyo jurídico",
-      organization: "Unidad de Justicia y Paz, Colombia (2014)",
+      title: "Legal Support",
+      organization: "Justice and Peace Unit, Colombia (2014)",
       icon: Scale,
       color: "text-space-gold",
-      description: "Apoyo jurídico en procesos de reintegración y justicia transicional"
+      description: "Legal support in reintegration processes and transitional justice."
     },
     {
-      title: "Asesoría legal",
-      organization: "Proceso de Paz con Autodefensas",
+      title: "Legal Advisor",
+      organization: "Peace Process with Self-Defense Groups",
       icon: Users,
       color: "text-space-aurora",
-      description: "Asesoría legal en justicia transicional y procesos de reconciliación"
+      description: "Legal advice in transitional justice and reconciliation processes."
     }
   ];
 
@@ -39,10 +39,10 @@ const Experience = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-gradient mb-6">
-            Experiencia Profesional
+            Professional Experience
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Trayectoria diversa en exploración espacial, derecho internacional y justicia
+            Diverse trajectory in space exploration, international law and justice
           </p>
         </div>
 

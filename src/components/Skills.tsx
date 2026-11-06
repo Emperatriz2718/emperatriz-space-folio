@@ -5,58 +5,58 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Idiomas",
+      title: "Languages",
       icon: Languages,
       color: "text-space-aurora",
-      skills: ["Árabe (nativo)", "Inglés", "Italiano", "Español", "Sánscrito"]
+      skills: ["Arabic (native)", "English", "Italian", "Spanish", "Sanskrit"]
     },
     {
-      title: "Tecnología y Derecho",
+      title: "Technology and Law",
       icon: Code,
       color: "text-space-stellar",
       skills: [
-        "Derecho Informático (Leiden – Kuwait)",
-        "Inteligencia Artificial",
-        "Ciberseguridad y justicia digital",
-        "Tecnologías aplicadas a la exploración espacial"
+        "Computer Law",
+        "Artificial Intelligence",
+        "Cybersecurity and digital justice",
+        "Technologies applied to space exploration"
       ]
     },
     {
-      title: "Derecho y Geopolítica",
+      title: "Law and Geopolitics",
       icon: Scale,
       color: "text-space-gold",
       skills: [
-        "Derecho Internacional y Penal",
-        "Derechos Humanos",
-        "Propiedad Intelectual",
-        "Geopolítica y relaciones internacionales",
-        "Seguridad global y soberanía espacial"
+        "International and Criminal Law",
+        "Human Rights",
+        "Intellectual Property",
+        "Geopolitics and international relations",
+        "Global security and space sovereignty"
       ]
     }
   ];
 
   const researchAreas = [
     {
-      title: "Exploración Espacial",
-      description: "Hábitats lunares y marcianos",
+      title: "Space Exploration",
+      description: "Lunar and Martian habitats",
       icon: Globe,
       color: "text-space-aurora"
     },
     {
-      title: "Inteligencia Artificial",
-      description: "Ética y aplicaciones en derecho y seguridad",
+      title: "Artificial Intelligence",
+      description: "Ethics and applications in law and security",
       icon: Brain,
       color: "text-space-stellar"
     },
     {
-      title: "Geopolítica",
-      description: "Gobernanza espacial y relaciones globales",
+      title: "Geopolitics",
+      description: "Space governance and global relations",
       icon: Shield,
       color: "text-space-gold"
     },
     {
-      title: "Exopolítica",
-      description: "Conciencia avanzada y espiritualidad aplicada",
+      title: "Exopolitics",
+      description: "Advanced consciousness and applied spirituality",
       icon: Brain,
       color: "text-space-aurora"
     }
@@ -67,10 +67,10 @@ const Skills = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-gradient mb-6">
-            Habilidades
+            Skills
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Competencias multidisciplinarias en tecnología, derecho y exploración espacial
+            Multidisciplinary expertise in technology, law and space exploration
           </p>
         </div>
 
@@ -107,7 +107,7 @@ const Skills = () => {
         {/* Research Areas */}
         <div className="text-center mb-12">
           <h3 className="text-3xl font-orbitron font-bold text-space-aurora mb-8">
-            Áreas de Investigación
+            Research Areas
           </h3>
         </div>
 

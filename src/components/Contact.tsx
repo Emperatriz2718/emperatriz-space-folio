@@ -7,41 +7,41 @@ import PersonalProfile from '@/components/PersonalProfile';
 const Contact = () => {
   const universities = [
     {
-      name: "Universidad de Leiden",
-      country: "Países Bajos",
+      name: "Leiden University",
+      country: "Netherlands",
       address: "Rapenburg 70, 2311 EZ Leiden",
       phone: "+31 71 527 2727",
       email: "info@leidenuniv.nl"
     },
     {
-      name: "Universidad de Kuwait",
+      name: "Kuwait University",
       country: "Kuwait",
       address: "P.O. Box 5969, Safat 13060",
       phone: "+965 2498 5555",
       email: "info@ku.edu.kw"
     },
     {
-      name: "Universidad de Dubái",
-      country: "EAU",
-      address: "Academic City, Dubái",
+      name: "University of Dubai",
+      country: "United Arab Emirates",
+      address: "Academic City, Dubai",
       phone: "+971 4 207 2000",
       email: "info@ud.ac.ae"
     },
     {
       name: "Universidad Jorge Tadeo Lozano",
       country: "Colombia",
-      address: "Carrera 4 No. 22-61, Bogotá",
+      address: "4th Avenue No. 22-61, Bogotá",
       phone: "+57 1 242 7030",
       email: "info@utadeo.edu.co"
     }
   ];
 
   const hobbies = [
-    "Lectura: Investigaciones aeroespaciales (NASA, agencias espaciales)",
-    "Música: Jazz, clásica y ambiental",
-    "Deporte y bienestar: Yoga, meditación, caminatas",
-    "Viajes: Culturas diversas y geografía planetaria",
-    "Estudios alternativos: Visión remota, percepción extrasensorial y exopolítica"
+    "Reading: Aerospace research (NASA, space agencies)",
+    "Music: Jazz, classical and ambient",
+    "Sports and wellness: Yoga, meditation, walking",
+    "Travel: Diverse cultures and planetary geography",
+    "Alternative studies: Remote viewing, extrasensory perception and exopolitics"
   ];
 
   return (
@@ -50,10 +50,10 @@ const Contact = () => {
         {/* Personal Info */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-gradient mb-6">
-            Contacto
+            Contact
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Conecta conmigo para colaboraciones en exploración espacial y proyectos futuristas
+            Connect with me for collaborations in space exploration and futuristic projects
           </p>
         </div>
 
@@ -62,29 +62,29 @@ const Contact = () => {
           <Card className="bg-space-cosmic/70 border-space-stellar stellar-glow">
             <CardHeader>
               <CardTitle className="text-2xl font-orbitron text-space-gold">
-                Información de Contacto
+                Contact Information
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-center space-x-4">
                 <MapPin className="w-6 h-6 text-space-aurora" />
                 <div>
-                  <p className="text-white font-semibold">Ubicación</p>
+                  <p className="text-white font-semibold">Location</p>
                   <p className="text-gray-300">Colombia</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 text-space-aurora mt-1" />
-                <div>
-                  <p className="text-white font-semibold">Correos electrónicos</p>
+                <Mail className="w-6 h-6 text-space-aurora mt-1 shrink-0" />
+                <div className="min-w-0 break-words">
+                  <p className="text-white font-semibold">Email Addresses</p>
                   <p className="text-gray-300">emperatrizmorales2718@gmail.com</p>
                   <p className="text-gray-300">emperatriz1827@hotmail.com</p>
                 </div>
               </div>
 
               <div className="pt-4">
-                <p className="text-white font-semibold mb-4">Redes Sociales</p>
+                <p className="text-white font-semibold mb-4">Social Media</p>
                 <div className="flex space-x-4">
                   <a 
                     href="https://www.instagram.com/emperatriz_1827/"
@@ -99,8 +99,8 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative p-3 bg-space-deep rounded-full hover:bg-space-stellar transition-colors stellar-glow"
-                    aria-label="Facebook Cuenta Oficial Verificada - Emperatriz Morales"
-                    title="Facebook Cuenta Oficial Verificada - Emperatriz Morales ✅"
+                    aria-label="Facebook Official Verified Account - Emperatriz Morales"
+                    title="Facebook Official Verified Account - Emperatriz Morales ✅"
                   >
                     <Facebook className="w-6 h-6 text-white" />
                     <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#1877F2] flex items-center justify-center border border-space-deep">
@@ -127,7 +127,7 @@ const Contact = () => {
         {/* Hobbies */}
         <div className="mb-20">
           <h3 className="text-3xl font-orbitron font-bold text-space-aurora mb-8 text-center">
-            Hobbies e Intereses
+            Hobbies and Interests
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {hobbies.map((hobby, index) => (
@@ -143,7 +143,7 @@ const Contact = () => {
         {/* Universities */}
         <div>
           <h3 className="text-3xl font-orbitron font-bold text-space-aurora mb-8 text-center">
-            Datos de Contacto de Universidades
+            University Contact Details
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {universities.map((university, index) => (

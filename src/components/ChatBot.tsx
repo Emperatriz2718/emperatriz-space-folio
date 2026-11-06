@@ -13,19 +13,19 @@ type ChatMessage = {
 const WELCOME: ChatMessage = {
   role: 'assistant',
   content:
-    '¡Hola! 👋 Soy el asistente virtual de Emperatriz Morales. Pregúntame lo que quieras sobre su trayectoria profesional, su educación, o su proyecto AIGLE-HAWK Alliance Global Interplanetaria.',
+    'Hello! 👋 I am Emperatriz Morales’s virtual assistant. Ask me about her professional experience, education or AIGLE-HAWK Alliance Global Interplanetary Project.',
   time: '',
 };
 
 const SUGGESTIONS = [
-  '¿Quién es Emperatriz Morales?',
-  'Proyecto AIGLE-HAWK Alliance Global Interplanetaria',
-  '¿Cuál es su formación académica?',
-  '¿Cómo puedo contactarla?',
+  'Who is Emperatriz Morales?',
+  'AIGLE-HAWK Alliance Global Interplanetary Project',
+  'What is her academic background?',
+  'How can I contact her?',
 ];
 
 const formatTime = () =>
-  new Date().toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' });
+  new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -110,7 +110,7 @@ const ChatBot = () => {
         }
       }
     } catch {
-      setError('No se pudo conectar con el asistente. Revisa tu conexión e inténtalo de nuevo.');
+      setError('Unable to connect to the assistant. Check your connection and try again.');
     } finally {
       setIsStreaming(false);
     }
@@ -139,27 +139,27 @@ const ChatBot = () => {
               </div>
               <div className="min-w-0">
                 <h3 className="text-white font-orbitron font-semibold text-sm truncate">
-                  Asistente de Emperatriz
+                  Emperatriz’s Assistant
                 </h3>
                 <p className="text-space-gold text-xs flex items-center gap-1.5">
                   <span className="w-2 h-2 bg-space-gold rounded-full animate-pulse inline-block" />
-                  {isStreaming ? 'Escribiendo…' : 'IA en línea'}
+                  {isStreaming ? 'Typing…' : 'AI online'}
                 </p>
               </div>
             </div>
             <div className="flex items-center space-x-1 shrink-0">
               <button
                 onClick={resetChat}
-                title="Nueva conversación"
-                aria-label="Nueva conversación"
+                title="New conversation"
+                aria-label="New conversation"
                 className="p-2 rounded-full text-white/80 hover:text-space-gold hover:bg-white/10 transition-colors duration-200"
               >
                 <RotateCcw size={16} />
               </button>
               <button
                 onClick={() => setIsOpen(false)}
-                title="Cerrar chat"
-                aria-label="Cerrar chat"
+                title="Close chat"
+                aria-label="Close chat"
                 className="p-2 rounded-full text-white/80 hover:text-space-gold hover:bg-white/10 transition-colors duration-200"
               >
                 <X size={18} />
@@ -215,7 +215,7 @@ const ChatBot = () => {
             {suggestionsVisible && (
               <div className="space-y-2 pt-2">
                 <p className="text-[11px] uppercase tracking-wider text-gray-500 flex items-center gap-1.5">
-                  <Sparkles size={12} className="text-space-gold" /> Preguntas sugeridas
+                  <Sparkles size={12} className="text-space-gold" /> Suggested questions
                 </p>
                 {SUGGESTIONS.map((suggestion) => (
                   <button
@@ -243,8 +243,8 @@ const ChatBot = () => {
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Escribe tu pregunta…"
-                aria-label="Escribe tu pregunta"
+                placeholder="Type your question…"
+                aria-label="Type your question"
                 maxLength={2000}
                 disabled={isStreaming}
                 className="flex-1 min-w-0 bg-space-deep/80 border border-space-stellar rounded-full px-4 py-2.5 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-space-aurora transition-colors disabled:opacity-50"
@@ -252,7 +252,7 @@ const ChatBot = () => {
               <button
                 type="submit"
                 disabled={!input.trim() || isStreaming}
-                aria-label="Enviar mensaje"
+                aria-label="Send message"
                 className="w-10 h-10 shrink-0 rounded-full bg-gradient-to-r from-space-aurora to-space-stellar text-white flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity disabled:opacity-40"
               >
                 <Send size={16} />
@@ -265,8 +265,8 @@ const ChatBot = () => {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen((v) => !v)}
-        title={isOpen ? 'Cerrar chat' : 'Abrir chat con el asistente'}
-        aria-label={isOpen ? 'Cerrar chat' : 'Abrir chat con el asistente'}
+        title={isOpen ? 'Close chat' : 'Open assistant chat'}
+        aria-label={isOpen ? 'Close chat' : 'Open assistant chat'}
         className={`w-14 h-14 bg-gradient-to-r from-space-aurora to-space-stellar hover:from-space-stellar hover:to-space-aurora text-white rounded-full shadow-2xl stellar-glow transition-all duration-300 flex items-center justify-center ${
           isOpen ? 'rotate-180' : 'animate-float'
         }`}

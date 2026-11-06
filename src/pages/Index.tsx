@@ -22,7 +22,7 @@ const Index = () => {
       <Skills />
       <Contact />
       
-      {/* ChatBot flotante */}
+      {/* Floating ChatBot */}
       <ChatBot />
       
        {/* Footer */}
@@ -42,8 +42,8 @@ const Index = () => {
                href="https://www.facebook.com/share/19ckpqLRcz/"
                target="_blank"
                rel="noopener noreferrer"
-               aria-label="Facebook Cuenta Oficial Verificada - Emperatriz Morales"
-               title="Facebook Cuenta Oficial Verificada - Emperatriz Morales ✅"
+               aria-label="Facebook Official Verified Account - Emperatriz Morales"
+               title="Facebook Official Verified Account - Emperatriz Morales ✅"
                className="relative p-3 bg-space-deep rounded-full hover:bg-space-stellar transition-colors stellar-glow"
              >
                <Facebook className="w-5 h-5 text-white" />
@@ -53,10 +53,10 @@ const Index = () => {
              </a>
            </div>
            <p className="text-gray-400 text-sm">
-             © 2024 Emperatriz Morales. Todos los derechos reservados.
+             © 2024 Emperatriz Morales. All rights reserved.
            </p>
           <p className="text-space-gold font-orbitron text-sm mt-2">
-            "Enfocada en la exploración interplanetaria"
+            "Focused on interplanetary exploration"
           </p>
         </div>
       </footer>
