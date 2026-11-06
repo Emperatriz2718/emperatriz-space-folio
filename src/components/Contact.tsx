@@ -129,20 +129,20 @@ const Contact = () => {
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
+                  <p className="text-space-aurora font-semibold">Nombre completo:</p>
+                  <p className="text-gray-300">Emperatriz Morales</p>
+                </div>
+                <div>
                   <p className="text-space-aurora font-semibold">Fecha de nacimiento:</p>
-                  <p className="text-gray-300">18 de noviembre de 1980</p>
+                  <p className="text-gray-300">18 de noviembre de 1999</p>
                 </div>
                 <div>
                   <p className="text-space-aurora font-semibold">Lugar de nacimiento:</p>
-                  <p className="text-gray-300">Pivijay, Magdalena, Colombia</p>
+                  <p className="text-gray-300">Emiratos Árabes Unidos</p>
                 </div>
                 <div>
                   <p className="text-space-aurora font-semibold">Estado civil:</p>
-                  <p className="text-gray-300">Casada</p>
-                </div>
-                <div>
-                  <p className="text-space-aurora font-semibold">Hijos:</p>
-                  <p className="text-gray-300">Uno</p>
+                  <p className="text-gray-300">Soltera</p>
                 </div>
               </div>
               <div className="pt-4">

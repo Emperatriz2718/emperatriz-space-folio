@@ -8,7 +8,7 @@ const Skills = () => {
       title: "Idiomas",
       icon: Languages,
       color: "text-space-aurora",
-      skills: ["Español (nativo)", "Inglés", "Árabe", "Italiano", "Sánscrito"]
+      skills: ["Árabe (nativo)", "Inglés", "Italiano", "Español", "Sánscrito"]
     },
     {
       title: "Tecnología y Derecho",
