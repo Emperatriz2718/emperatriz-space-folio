@@ -97,12 +97,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Personal Slogan */}
-          <div className="max-w-3xl mx-auto pt-8">
-            <blockquote className="text-xl md:text-2xl font-orbitron italic text-space-gold border-l-4 border-space-aurora pl-6">
-              "I am a reserved and dignified woman in my actions, diplomatic and loyal. Futuristic vanguard woman focused on interplanetary exploration."
-            </blockquote>
-          </div>
         </div>
       </div>
     </header>

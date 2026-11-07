@@ -2,7 +2,6 @@
 import { Mail, MapPin, Phone, Instagram, Facebook, Twitter, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import PersonalProfile from '@/components/PersonalProfile';
 
 const Contact = () => {
   const universities = [
@@ -36,13 +35,6 @@ const Contact = () => {
     }
   ];
 
-  const hobbies = [
-    "Reading: Aerospace research (NASA, space agencies)",
-    "Music: Jazz, classical and ambient",
-    "Sports and wellness: Yoga, meditation, walking",
-    "Travel: Diverse cultures and planetary geography",
-    "Alternative studies: Remote viewing, extrasensory perception and exopolitics"
-  ];
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-transparent to-space-cosmic/50">
@@ -120,24 +112,6 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-        </div>
-
-        <PersonalProfile />
-
-        {/* Hobbies */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-orbitron font-bold text-space-aurora mb-8 text-center">
-            Hobbies and Interests
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {hobbies.map((hobby, index) => (
-              <Card key={index} className="bg-space-cosmic/50 border-space-stellar hover:border-space-aurora transition-all duration-300 stellar-glow">
-                <CardContent className="p-6">
-                  <p className="text-gray-300 leading-relaxed">{hobby}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
 
         {/* Universities */}

@@ -1,6 +1,5 @@
 
 import { Instagram, Facebook } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import StudiesExpertise from '@/components/StudiesExpertise';
 import Education from '@/components/Education';
@@ -59,9 +58,6 @@ const Index = () => {
           <p className="text-space-gold font-orbitron text-sm mt-2">
             "Focused on interplanetary exploration"
           </p>
-          <Link to="/" className="inline-block mt-4 text-sm text-space-gold underline underline-offset-4 hover:text-white transition-colors">
-            Ver mi página personal
-          </Link>
         </div>
       </footer>
     </div>

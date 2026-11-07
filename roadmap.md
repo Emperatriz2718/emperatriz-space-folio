@@ -11,3 +11,6 @@
 - [x] Página personal negra y dorada en / (frase, sobre mí, lámina de lealtad, Instagram + WhatsApp)
 - [x] Verificar página personal en celular y escritorio
 - [x] Activar botón de WhatsApp con el número de la usuaria (+57 3163973857)
+- [x] Retirar página personal, frase, lámina, perfil personal y WhatsApp del sitio público; dejar únicamente el portafolio espacial.
+- [x] Verificar que /, /index y /portafolio muestran solo el portafolio y /personal no muestra contenido privado.
+- [ ] Publicar los cambios en el enlace público (pendiente de autorización para publicar).
