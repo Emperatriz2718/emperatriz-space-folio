@@ -22,6 +22,8 @@ export default {
 			fontFamily: {
 				'orbitron': ['Orbitron', 'monospace'],
 				'inter': ['Inter', 'sans-serif'],
+				'noir-serif': ['"Cormorant Garamond"', 'serif'],
+				'jost': ['Jost', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -74,6 +76,15 @@ export default {
 					'stellar': '#4338CA',
 					'aurora': '#7C3AED',
 					'gold': '#F59E0B'
+				},
+				noir: {
+					'bg': 'hsl(var(--noir-bg))',
+					'surface': 'hsl(var(--noir-surface))',
+					'ivory': 'hsl(var(--noir-ivory))',
+					'muted': 'hsl(var(--noir-muted))',
+					'gold': 'hsl(var(--noir-gold))',
+					'goldsoft': 'hsl(var(--noir-gold-soft))',
+					'line': 'hsl(var(--noir-line))'
 				}
 			},
 			borderRadius: {

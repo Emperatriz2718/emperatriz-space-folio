@@ -57,6 +57,14 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
     --sidebar-ring: 258 90% 66%;
+
+    --noir-bg: 0 0% 4%;
+    --noir-surface: 0 0% 8%;
+    --noir-ivory: 40 30% 92%;
+    --noir-muted: 38 12% 62%;
+    --noir-gold: 43 62% 52%;
+    --noir-gold-soft: 45 62% 72%;
+    --noir-line: 43 35% 22%;
   }
 }
 
@@ -76,6 +84,145 @@ All colors MUST be HSL.
   .profile-instagram {
     background: linear-gradient(90deg, hsl(var(--social-instagram-start)), hsl(var(--social-instagram-middle)), hsl(var(--social-instagram-end)));
   }
+
+  .noir-page {
+    background-color: hsl(var(--noir-bg));
+    background-image:
+      radial-gradient(circle at 50% 0%, hsl(var(--noir-gold) / 0.09) 0%, transparent 55%),
+      radial-gradient(circle at 50% 100%, hsl(var(--noir-gold) / 0.05) 0%, transparent 60%);
+    color: hsl(var(--noir-ivory));
+  }
+  .noir-overline {
+    color: hsl(var(--noir-gold));
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  .noir-divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--noir-gold)), transparent);
+    position: relative;
+  }
+  .noir-divider::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: hsl(var(--noir-gold));
+  }
+  .noir-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: hsl(var(--noir-gold-soft));
+  }
+  .noir-scroll {
+    color: hsl(var(--noir-muted));
+    transition: color 200ms ease;
+  }
+  .noir-scroll:hover { color: hsl(var(--noir-gold)); }
+  .noir-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: hsl(var(--noir-gold-soft));
+    margin-bottom: 1.6rem;
+  }
+  .noir-body {
+    color: hsl(var(--noir-ivory) / 0.82);
+    line-height: 1.85;
+  }
+  .noir-card {
+    background: hsl(var(--noir-surface));
+    border: 1px solid hsl(var(--noir-line));
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+  .noir-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: hsl(var(--noir-gold));
+    margin-bottom: 0.5rem;
+  }
+  .noir-plate {
+    position: relative;
+    padding: 2.75rem 1.75rem;
+    border: 1px solid hsl(var(--noir-gold) / 0.55);
+    border-radius: 0.75rem;
+    background: linear-gradient(160deg, hsl(var(--noir-surface)) 0%, hsl(var(--noir-bg)) 100%);
+    box-shadow: 0 0 45px hsl(var(--noir-gold) / 0.12);
+  }
+  .noir-plate::before {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border: 1px solid hsl(var(--noir-gold) / 0.28);
+    border-radius: 0.5rem;
+    pointer-events: none;
+  }
+  .noir-plate-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.7;
+    color: hsl(var(--noir-ivory));
+    text-align: center;
+  }
+  .noir-signature {
+    margin-top: 1.4rem;
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: hsl(var(--noir-gold));
+  }
+  .noir-btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.9rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, hsl(var(--noir-gold-soft)) 0%, hsl(var(--noir-gold)) 100%);
+    color: hsl(var(--noir-bg));
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: filter 200ms ease, transform 200ms ease;
+  }
+  .noir-btn-gold:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  .noir-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.9rem;
+    border-radius: 9999px;
+    border: 1px solid hsl(var(--noir-gold) / 0.6);
+    color: hsl(var(--noir-gold-soft));
+    background: transparent;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: background 200ms ease, transform 200ms ease;
+  }
+  .noir-btn-outline:hover { background: hsl(var(--noir-gold) / 0.08); transform: translateY(-1px); }
+  .noir-footer {
+    border-top: 1px solid hsl(var(--noir-line));
+  }
+  .noir-link {
+    color: hsl(var(--noir-gold));
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: hsl(var(--noir-gold) / 0.5);
+  }
+  .noir-link:hover { color: hsl(var(--noir-gold-soft)); }
 }
 
 @layer base {
