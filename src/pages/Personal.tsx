@@ -2,7 +2,7 @@ import { Instagram, MessageCircle, ChevronDown, ArrowUpRight } from 'lucide-reac
 import { Link } from 'react-router-dom';
 
 // Escribe aquí tu número con código de país, sin + ni espacios. Ejemplo: 573001234567
-const WHATSAPP_NUMBER = '';
+const WHATSAPP_NUMBER = '573163973857';
 
 const Personal = () => {
   const whatsappReady = WHATSAPP_NUMBER.length > 0;
