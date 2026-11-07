@@ -10,4 +10,4 @@
 - [x] Verificar build y vista previa
 - [x] Página personal negra y dorada en / (frase, sobre mí, lámina de lealtad, Instagram + WhatsApp)
 - [x] Verificar página personal en celular y escritorio
-- [ ] Activar botón de WhatsApp: falta el número de la usuaria (constante WHATSAPP_NUMBER en src/pages/Personal.tsx)
+- [x] Activar botón de WhatsApp con el número de la usuaria (+57 3163973857)
