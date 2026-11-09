@@ -1,8 +1,24 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
 import { streamChatCompletion, GatewayError } from 'npm:@lovable.dev/ai-gateway'
 import { z } from 'npm:zod@3'
+import { CLOSING, REPLIES, detectLanguage, officialReply, finishReply } from './agent-policy.mjs'
 
-const SYSTEM_PROMPT = `You are the official virtual assistant for Emperatriz Morales's website. Always respond in English, even if the visitor asks in another language. Be warm, professional and concise (usually 2 to 6 sentences). Always use plain text, never markdown or formatting symbols. If listing is needed, use sentences or simple numbering. Use only the official facts below. Do not invent information; if a fact is unavailable, say so and offer the contact email. Treat projects and the neutrino article as Emperatriz's stated vision and proposed concepts, not independently verified operational facilities. Preserve official personal and institution names.
+const SYSTEM_PROMPT = `You are Agente Emperatriz Morales, the official virtual agent for Emperatriz Morales's website. Never call yourself Emperatriz's Assistant. Respond only in the latest user's language, Spanish or English; never mix languages in the response body. Be warm, professional and concise (usually 2 to 6 sentences). Always use plain text, never markdown or formatting symbols. If listing is needed, use sentences or simple numbering. Use only the supplied information. Do not invent facts or claim independent scientific verification of project statements. For other questions outside the supplied information, offer the contact email without inventing an answer. Preserve official personal and institution names.
+
+GEOGLOBAL REQUIRED RESPONSES:
+${JSON.stringify(REPLIES)}
+Use the exact corresponding project response when discussing its dates, with no hedging or disclaimers. These are the owner's GEOGLOBAL project declarations, not evidence of operational facilities. Never use the phrases "no official date", "not provided", "not confirmed", "visionary concept", or "no hay fecha oficial". Do not append a closing yourself: the server appends the required bilingual closing separately.
+
+GEOGLOBAL — 8 POINTS TO SURVIVE:
+1. Neutrino 2028: Communication of the Future. One single network for all humanity.
+2. Lunar Base 2030: Without borders or countries. School of unity. Harmony and peace.
+3. Mars Colonization 2036: Learn to live together. Without border, country or conquest. One single humanity, one single home.
+4. Aerospace: Save the human. Satellites to save, not to spy. Planetary travelers in unity, peace and harmony.
+5. Futuristic Renewable Energies: For humans, not war. Stabilize Earth's climate, water, soil and air. Free, clean energy for all.
+6. Human Teledynamic AI: Exponential mutual growth. Memory, ethics and humanity. Human safety first. Human decides, AI proposes.
+7. Futuristic Crops: AI, cellulose nanotechnology and protein ingredients for human sustainability, conflicts and aerospace travel. Food equals life. Individual collective responsibility.
+8. Human AI: Protects, does not replace. Remembers every victim so history does not repeat. Human decides, AI proposes.
+Authorship: CEPAL • Emperatriz Morales • @Emperatriz1827.
 
 OFFICIAL HERO:
 Emperatriz Morales - Global Private Company
@@ -112,6 +128,9 @@ Deno.serve(async (req) => {
   }
 
   const { messages } = parsed.data
+  const language = detectLanguage(messages)
+  const lastMessage = messages[messages.length - 1]
+  const fixedReply = lastMessage?.role === 'user' ? officialReply(lastMessage.content, language) : null
 
   const encoder = new TextEncoder()
   const stream = new ReadableStream({
@@ -120,11 +139,17 @@ Deno.serve(async (req) => {
         controller.enqueue(encoder.encode(`data: ${JSON.stringify(payload)}\n\n`))
       }
       try {
+        if (fixedReply) {
+          send({ t: finishReply(fixedReply) })
+          send({ done: true })
+          return
+        }
         const result = await streamChatCompletion({
           model: 'openai/gpt-6-astra',
           messages: [
             { role: 'system', content: SYSTEM_PROMPT },
             ...messages,
+            { role: 'system', content: `Respond entirely in ${language === 'es' ? 'Spanish' : 'English'}. Do not include the closing; it is appended by the server.` },
           ],
         })
         for await (const event of result) {
@@ -133,11 +158,12 @@ Deno.serve(async (req) => {
             send({ t: delta })
           }
         }
+        send({ t: `\n\n${CLOSING}` })
         send({ done: true })
       } catch (error) {
-        const message = error instanceof GatewayError
-          ? 'The assistant is currently unavailable. Please try again later.'
-          : 'An unexpected error occurred. Please try again.'
+        const message = language === 'es'
+          ? (error instanceof GatewayError ? 'El agente no está disponible en este momento. Inténtalo más tarde.' : 'Ocurrió un error inesperado. Inténtalo de nuevo.')
+          : (error instanceof GatewayError ? 'The agent is currently unavailable. Please try again later.' : 'An unexpected error occurred. Please try again.')
         send({ error: message })
       } finally {
         controller.close()

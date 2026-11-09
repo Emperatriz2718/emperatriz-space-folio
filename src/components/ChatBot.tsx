@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { MessageCircle, X, Send, Sparkles, RotateCcw } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID as string;
 const CHATBOT_URL = `https://${projectId}.supabase.co/functions/v1/chatbot-emperatriz`;
@@ -13,15 +14,15 @@ type ChatMessage = {
 const WELCOME: ChatMessage = {
   role: 'assistant',
   content:
-    'Hello! 👋 I am Emperatriz Morales’s virtual assistant. Ask me about her professional experience, education or AIGLE-HAWK Alliance Global Interplanetary Project.',
+    'Hello, I am Agent Emperatriz Morales. Ask me about the 8 GEOGLOBAL points.\n\nHUMANO DECIDE. IA PROPONE. PAZ Y ARMONÍA. / HUMAN DECIDES. AI PROPOSES. PEACE AND HARMONY.',
   time: '',
 };
 
 const SUGGESTIONS = [
-  'Who is Emperatriz Morales?',
-  'AIGLE-HAWK Alliance Global Interplanetary Project',
-  'What is her academic background?',
-  'How can I contact her?',
+  'GEOGLOBAL: 8 points',
+  'Neutrino — 2028',
+  'Lunar Base — 2030',
+  'Mars / Colonization — 2036',
 ];
 
 const formatTime = () =>
@@ -138,8 +139,8 @@ const ChatBot = () => {
                 <span className="text-xs font-orbitron font-bold text-white">EM</span>
               </div>
               <div className="min-w-0">
-                <h3 className="text-white font-orbitron font-semibold text-sm truncate">
-                  Emperatriz’s Assistant
+                <h3 className="text-foreground font-orbitron font-semibold text-sm leading-snug break-words">
+                  Agente Emperatriz Morales
                 </h3>
                 <p className="text-space-gold text-xs flex items-center gap-1.5">
                   <span className="w-2 h-2 bg-space-gold rounded-full animate-pulse inline-block" />
@@ -148,22 +149,22 @@ const ChatBot = () => {
               </div>
             </div>
             <div className="flex items-center space-x-1 shrink-0">
-              <button
+              <Button variant="ghost"
                 onClick={resetChat}
                 title="New conversation"
                 aria-label="New conversation"
                 className="p-2 rounded-full text-white/80 hover:text-space-gold hover:bg-white/10 transition-colors duration-200"
               >
                 <RotateCcw size={16} />
-              </button>
-              <button
+              </Button>
+              <Button variant="ghost"
                 onClick={() => setIsOpen(false)}
                 title="Close chat"
                 aria-label="Close chat"
                 className="p-2 rounded-full text-white/80 hover:text-space-gold hover:bg-white/10 transition-colors duration-200"
               >
                 <X size={18} />
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -218,13 +219,13 @@ const ChatBot = () => {
                   <Sparkles size={12} className="text-space-gold" /> Suggested questions
                 </p>
                 {SUGGESTIONS.map((suggestion) => (
-                  <button
+                  <Button variant="ghost"
                     key={suggestion}
                     onClick={() => sendMessage(suggestion)}
                     className="w-full text-left text-xs px-3 py-2 rounded-xl bg-space-cosmic/60 border border-space-stellar text-gray-200 hover:border-space-aurora hover:text-white transition-all duration-200"
                   >
                     {suggestion}
-                  </button>
+                  </Button>
                 ))}
               </div>
             )}
@@ -249,21 +250,21 @@ const ChatBot = () => {
                 disabled={isStreaming}
                 className="flex-1 min-w-0 bg-space-deep/80 border border-space-stellar rounded-full px-4 py-2.5 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-space-aurora transition-colors disabled:opacity-50"
               />
-              <button
+              <Button variant="ghost"
                 type="submit"
                 disabled={!input.trim() || isStreaming}
                 aria-label="Send message"
                 className="w-10 h-10 shrink-0 rounded-full bg-gradient-to-r from-space-aurora to-space-stellar text-white flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity disabled:opacity-40"
               >
                 <Send size={16} />
-              </button>
+              </Button>
             </form>
           </div>
         </div>
       )}
 
       {/* Chat Toggle Button */}
-      <button
+      <Button variant="ghost"
         onClick={() => setIsOpen((v) => !v)}
         title={isOpen ? 'Close chat' : 'Open assistant chat'}
         aria-label={isOpen ? 'Close chat' : 'Open assistant chat'}
@@ -272,7 +273,7 @@ const ChatBot = () => {
         }`}
       >
         {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
-      </button>
+      </Button>
 
       {/* Notification Dot */}
       {!isOpen && (

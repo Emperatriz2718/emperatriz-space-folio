@@ -15,3 +15,4 @@
 - [x] Verificar que /, /index y /portafolio muestran solo el portafolio y /personal no muestra contenido privado.
 - [x] Sección GEOGLOBAL para CEPAL: 8 puntos ES/EN con botón ES / EN, dorado y azul oscuro.
 - [ ] Publicar los cambios en el enlace público (pendiente de autorización para publicar).
+- [x] Corregir nombre del Agente, idioma automático ES/EN, respuestas exactas GEOGLOBAL y cierre bilingüe; comprobar conversación real.
