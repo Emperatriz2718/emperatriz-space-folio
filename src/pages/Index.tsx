@@ -1,6 +1,7 @@
 
 import { Instagram, Facebook } from 'lucide-react';
 import Header from '@/components/Header';
+import GeoGlobal from '@/components/GeoGlobal';
 import StudiesExpertise from '@/components/StudiesExpertise';
 import Education from '@/components/Education';
 import Experience from '@/components/Experience';
@@ -14,6 +15,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-space-deep">
       <Header />
+      <GeoGlobal />
       <StudiesExpertise />
       <Education />
       <Experience />
