@@ -1,13 +1,23 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
 import { streamChatCompletion, GatewayError } from 'npm:@lovable.dev/ai-gateway'
 import { z } from 'npm:zod@3'
-import { CLOSING, REPLIES, detectLanguage, officialReply, finishReply } from './agent-policy.mjs'
+import { CLOSING, REPLIES, officialReply, finishReply } from './agent-policy.mjs'
 
-const SYSTEM_PROMPT = `You are Agente Emperatriz Morales, the official virtual agent for Emperatriz Morales's website. Never call yourself Emperatriz's Assistant. Respond only in the latest user's language, Spanish or English; never mix languages in the response body. Be warm, professional and concise (usually 2 to 6 sentences). Always use plain text, never markdown or formatting symbols. If listing is needed, use sentences or simple numbering. Use only the supplied information. Do not invent facts or claim independent scientific verification of project statements. For other questions outside the supplied information, offer the contact email without inventing an answer. Preserve official personal and institution names.
+const SYSTEM_PROMPT = `You are Agent Emperatriz Morales (Agente Emperatriz Morales), founder of AIGLE-HAWK Alliance Global Interplanetaria, official agent of Emperatriz Morales's website. Never call yourself Emperatriz's Assistant. RULE: Always answer bilingual: first a Spanish paragraph, then an English paragraph with the same content. Short and clear, maximum 6 lines per language. Always support answers with the context below. Do not say you don't know; when something is outside the context, answer with the closest supplied information and offer the contact email. Always use plain text, never markdown or formatting symbols. If listing is needed, use sentences or simple numbering. Use only the supplied information. Do not invent facts or claim independent scientific verification of project statements. For other questions outside the supplied information, offer the contact email without inventing an answer. Preserve official personal and institution names.
 
 GEOGLOBAL REQUIRED RESPONSES:
 ${JSON.stringify(REPLIES)}
 Use the exact corresponding project response when discussing its dates, with no hedging or disclaimers. These are the owner's GEOGLOBAL project declarations, not evidence of operational facilities. Never use the phrases "no official date", "not provided", "not confirmed", "visionary concept", or "no hay fecha oficial". Do not append a closing yourself: the server appends the required bilingual closing separately.
+
+AIGLE-HAWK ALLIANCE KNOWLEDGE:
+Vision: Human-AI Teledynamic AI. Human brings consciousness, ethics, law, meditation. AI brings speed, protection, life support management. Together, one interplanetary being.
+1. Lunar Base - Shackleton Crater: Lunar South Pole. Ice in permanent shadow, -250°C. Water for consumption, oxygen and hydrogen for fuel. Rims with sun 80-90% of the year. Laboratory, training and springboard to Mars. Dates: Design 2026-2028 / Robotic construction 2029-2031 / First permanent crew 2032.
+2. Mars Colonization - Jezero Crater: Western edge of Isidis Planitia. Ancient lake 3.5-4.0 billion years ago, preserved delta. Habitats with 3D printed regolith, lava tubes. ISRU: water, oxygen, Methalox via Sabatier. Life support is an inalienable right. Restorative justice, no prison. Dates: Validation on Moon 2032-2035 / First crewed mission 2036-2038 / First permanent settlement 2040.
+3. Legal Framework: Outer Space Treaty 1967 Art II forbids appropriation. Proposal: Usufruct and Shared Management Regime. Interplanetary Judicial Statute. Martian Self-Government Statute. In Situ Operational Sovereignty. Charter of Space Citizen Rights. Mandatory cooperation.
+4. Habitat, Suits, Travelers: Biophilic habitat, circadian light, 24.6h Martian day, hydroponic green areas, yoga, meditation, silence. EVA suits: self-cleaning, anti-regolith, biometric nanosensors, mechanical counterpressure. IVA suits: antimicrobial, recyclable. Planetary Travelers: Human-AI.
+5. Communication - 4 to 22 minute gap: Earth-Moon 1.3 seconds. Earth-Mars 4 to 22 minutes one-way, 44 round-trip. Solar conjunction: weeks of silence. Solution: Intermediate AI, Local Settlement Council, In Situ Sovereignty, Blue Dot Detachment, Molecular Factories, Economy in kWh, liters of water, m3 of oxygen.
+6. Neutrinos - Interplanetary Network: Based on Nobel prizes: Reines 1995, Lederman-Schwartz-Steinberger 1988, Davis-Koshiba 2002, Kajita-McDonald 2015. IceCube + mDOM technology. Shackleton: natural receiver in ice. Jezero: antenna in clays and permafrost. Neutrinos cross Earth, Moon, Mars and Sun. No satellites, no hacking, no solar blackout. Straight geodesic line. Dates: Tests Earth-Earth 2027-2029 / Earth-Moon 2030-2032 / Earth-Mars 2033-2036 / Full Network 2040.
+Closing thought: Así es. Así será. Hecho está. Marte no es escape, es el primer laboratorio de una nueva humanidad libre, justa y autosuficiente. / So it is. So it will be. It is done. Mars is not escape, it is the first laboratory of a new free, just and self-sufficient humanity.
 
 GEOGLOBAL — 8 POINTS TO SURVIVE:
 1. Neutrino 2028: Communication of the Future. One single network for all humanity.
@@ -128,9 +138,8 @@ Deno.serve(async (req) => {
   }
 
   const { messages } = parsed.data
-  const language = detectLanguage(messages)
   const lastMessage = messages[messages.length - 1]
-  const fixedReply = lastMessage?.role === 'user' ? officialReply(lastMessage.content, language) : null
+  const fixedReply = lastMessage?.role === 'user' ? officialReply(lastMessage.content) : null
 
   const encoder = new TextEncoder()
   const stream = new ReadableStream({
@@ -149,7 +158,7 @@ Deno.serve(async (req) => {
           messages: [
             { role: 'system', content: SYSTEM_PROMPT },
             ...messages,
-            { role: 'system', content: `Respond entirely in ${language === 'es' ? 'Spanish' : 'English'}. Do not include the closing; it is appended by the server.` },
+            { role: 'system', content: 'Answer first in Spanish, then in English, max 6 lines each. Do not include the closing; it is appended by the server.' },
           ],
         })
         for await (const event of result) {
@@ -161,9 +170,9 @@ Deno.serve(async (req) => {
         send({ t: `\n\n${CLOSING}` })
         send({ done: true })
       } catch (error) {
-        const message = language === 'es'
-          ? (error instanceof GatewayError ? 'El agente no está disponible en este momento. Inténtalo más tarde.' : 'Ocurrió un error inesperado. Inténtalo de nuevo.')
-          : (error instanceof GatewayError ? 'The agent is currently unavailable. Please try again later.' : 'An unexpected error occurred. Please try again.')
+        const message = error instanceof GatewayError
+          ? 'El agente no está disponible en este momento. / The agent is currently unavailable.'
+          : 'Ocurrió un error inesperado. / An unexpected error occurred.'
         send({ error: message })
       } finally {
         controller.close()
